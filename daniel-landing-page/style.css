@@ -1,0 +1,252 @@
+/* ==================================== */
+/* 1. ESTILOS GERAIS, RESET E VARIÁVEIS */
+/* ==================================== */
+
+:root {
+    /* Paleta de Cores Sugerida */
+    --cor-principal: #333333; /* Preto Quase Total */
+    --cor-destaque: #007bff; /* Azul Marinho */
+    --cor-fundo-secundario: #f8f9fa; /* Cinza Claro */
+    --cor-fundo-primario: #ffffff; /* Branco */
+    --cor-texto-claro: #6c757d; /* Cinza para parágrafos */
+}
+
+* {
+    box-sizing: border-box; 
+    /* Adiciona transição suave para todos os elementos que mudam de estado */
+    transition: all 0.3s ease-out; 
+}
+
+body {
+    /* Fonte Poppins importada no HTML */
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--cor-fundo-primario);
+    color: var(--cor-principal);
+}
+
+/* ==================================== */
+/* 2. TIPOGRAFIA E TÍTULOS */
+/* Requisito 6: Cor e tamanho de fontes */
+/* ==================================== */
+
+h1, h2, h3 {
+    color: var(--cor-principal);
+    margin-top: 0;
+    font-weight: 700; /* Negrito */
+}
+
+h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--cor-destaque);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+p, .frase-apresentacao {
+    color: var(--cor-texto-claro);
+    font-size: 1.1em;
+    font-weight: 400; /* Normal */
+}
+
+/* ==================================== */
+/* 3. LAYOUT GERAL E SEÇÕES */
+/* Requisito 6: Espaçamentos e Cor de fundo */
+/* ==================================== */
+
+.secao {
+    padding: 60px 5%; 
+    margin-bottom: 0; 
+}
+
+.secao-secundaria {
+    background-color: var(--cor-fundo-secundario); 
+}
+
+/* HEADER/CABECALHO */
+.secao-destaque {
+    text-align: center;
+    padding: 40px 5% 20px;
+    background-color: var(--cor-fundo-secundario);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra sutil */
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid var(--cor-destaque);
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4);
+}
+
+/* ==================================== */
+/* 4. NAVEGAÇÃO (<nav>) E LINKS */
+/* Requisito 6: Estilo para links e efeito :hover */
+/* ==================================== */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Requisito: display: flex */
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--cor-destaque); 
+    border-bottom: 2px solid var(--cor-destaque);
+}
+
+/* ==================================== */
+/* 5. HABILIDADES (Tags Aprimoradas) */
+/* ==================================== */
+
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.skill-tag {
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9em;
+    border: 1px solid rgba(0, 123, 255, 0.3); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.skill-tag:hover {
+    background-color: #0056b3; 
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+
+/* ==================================== */
+/* 6. PROJETOS (Cards) */
+/* Requisito 6: Uso simples de display: flex */
+/* ==================================== */
+
+.cards-projetos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.card-projeto {
+    background-color: var(--cor-fundo-primario);
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+/* ==================================== */
+/* 7. BOTÕES E CONTATO */
+/* Requisito 6: Estilo para "botão" (link estilizado) */
+/* ==================================== */
+
+.botao, .botao-social {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.botao:hover, .botao-social:hover {
+    background-color: #0056b3;
+    color: white; 
+    text-decoration: none;
+}
+
+.links-sociais {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ==================================== */
+/* 8. RODAPÉ (<footer>) */
+/* Requisito 4: Rodapé */
+/* ==================================== */
+
+footer {
+    background-color: var(--cor-principal);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* ==================================== */
+/* 9. MEDIA QUERIES (RESPONSIVIDADE) */
+/* Para telas menores que 768px */
+/* ==================================== */
+
+@media screen and (max-width: 768px) {
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .secao {
+        padding: 40px 5%;
+    }
+    
+    /* Faz a navegação empilhar verticalmente */
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    nav a {
+        padding: 5px;
+    }
+    
+    /* Centraliza e ocupa mais espaço */
+    .card-projeto {
+        max-width: 90%; 
+    }
+}
